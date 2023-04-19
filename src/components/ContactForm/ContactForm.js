@@ -25,6 +25,8 @@ import css from './ContactForm.module.css';
       })
     };
 
+    
+
     handleSubmit = e => {
       e.preventDefault();
 
@@ -40,6 +42,11 @@ import css from './ContactForm.module.css';
     }
 
     render() { 
+
+      const input = document.querySelector("#phone");
+        intlTelInput(input, {
+        utilsScript: "path/to/utils.js"
+      });
 
       return (
         <form className={css.contactForm} onSubmit={this.handleSubmit}>
